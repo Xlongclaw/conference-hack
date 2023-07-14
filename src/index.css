@@ -25,11 +25,11 @@ code {
 @tailwind utilities;
 
 ::-webkit-scrollbar{
-  width: 8px; 
+  width: 5px; 
   background-color: rgb(217, 217, 217);
 }
 ::-webkit-scrollbar-thumb{
-  background-color: #e37e4a;
+  background-color: #5db7de;
 }
 
 .custom-font1{
@@ -37,7 +37,7 @@ code {
 }
 
 .active{
-  color: #000;
+  color: #5db7de;
   font-size: medium;
   font-weight:600;
 }
@@ -56,4 +56,18 @@ code {
 
 .shadow1{
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.hidescroll::-webkit-scrollbar{
+  display: none;
+}
+.scroll1::-webkit-scrollbar{
+  width: 5px;
+  background-color: rgb(45, 45, 45);
+}
+.scroll1::-webkit-scrollbar-thumb{
+  border-radius: 2rem;
+}
+
+.shadow2{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }

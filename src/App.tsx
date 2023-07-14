@@ -1,11 +1,17 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {HomePage,SpeakersPage,CommitteesPage,ContactUsPage} from "./screens";
+import { SWRConfig } from "swr";
 
 
 const App: React.FC = () => {
   return (
     <div className="text-ascentColor2">
+      <SWRConfig 
+      value={{
+        fetcher: (resource, init) => fetch(resource, {...init,headers:new Headers({"Authorization": "D9kN4A"})}).then(res => res.json())
+      }}
+    >
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage/>} />
@@ -14,6 +20,7 @@ const App: React.FC = () => {
           <Route path="/contactus" element={<ContactUsPage/>} />
         </Routes>
       </BrowserRouter>
+    </SWRConfig>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, HamburgerMenu, Logo, NavBarLinks } from "../components";
+import { ButtonX, HamburgerMenu, Logo, NavBarLinks } from "../components";
 import getDataModule from "../Constants/API";
 
 const NavBar: React.FC = () => {
@@ -15,7 +15,10 @@ const NavBar: React.FC = () => {
       <Logo heading={navBarData.heading} subHeading={navBarData.subHeading}/>
       <NavBarLinks />
       <HamburgerMenu />
-      <Button title="Contact Us" />
+      {/* <button className="bg-custom-orange py-5 flex-none w-48 text-ascentColor3">
+          Contact us
+        </button> */}
+      <ButtonX variant={1} title="Contact Us" />
     </div>
   );
 };

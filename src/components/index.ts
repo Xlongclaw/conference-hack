@@ -10,5 +10,6 @@ import Footer from "./Footer";
 import ImageSlider01 from "./ImageSlider01";
 import ButtonX from "./ButtonX";
 import Button from "./Button";
+import AnnouncementContainer from "./AnnouncementContainer";
 
-export {NavBar,Logo,NavBarLinks,HamburgerIcon,HamburgerMenu,DropDown,HeroSection,DateLocationContainer,Footer,ImageSlider01,ButtonX,Button}
+export {NavBar,Logo,NavBarLinks,HamburgerIcon,HamburgerMenu,DropDown,HeroSection,DateLocationContainer,Footer,ImageSlider01,ButtonX,Button,AnnouncementContainer}
