@@ -25,10 +25,10 @@ import useSWR from "swr";
 //   updatedAt: string;
 // };
 
-const HeroSection: React.FC = () => {
+const HeroSection: React.FC<{confId:string}> = (props) => {
   const CONF_ID1 = "647f315f62cdb3a26174fc38"
   const CONF_ID2 = "6492f77d1cc9629afd1c7008"
-  const {data,isLoading,error} = useSWR(`https://conference.cyclic.app/home/conf/${CONF_ID2}`)
+  const {data,isLoading,error} = useSWR(`https://conference.cyclic.app/home/conf/${props.confId}`)
   console.log(data);
   
   if (error) return <div>ERROR</div>;

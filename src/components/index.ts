@@ -16,6 +16,7 @@ import AboutInstituteContainer from "./AboutInstituteContainer";
 import SpeakerContainer from "./SpeakerContainer";
 import SpeakersPanel from "./SpeakersPanel";
 import ConferenceWrapper from "./ConferenceWrapper";
+import HeroDotsAnimation from "./HeroDotsAnimation";
 
 export {
   NavBar,
@@ -35,5 +36,6 @@ export {
   AboutInstituteContainer,
   SpeakerContainer,
   SpeakersPanel,
-  ConferenceWrapper
+  ConferenceWrapper,
+  HeroDotsAnimation
 };

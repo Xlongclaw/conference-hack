@@ -1,42 +1,49 @@
-import React from "react";
-import { HeroSection, ImageSlider01, NavBar } from "../components";
-import Lottie from "lottie-react";
-import "@dotlottie/player-component";
+import React, { useState } from "react";
+import { HeroDotsAnimation, HeroSection, NavBar } from "../components";
+import {ChevronRight} from "@mui/icons-material"
 
 const HomeSection: React.FC = () => {
+  const [confNo, setConfNo] = useState(0);
+  const confIds = ["647f315f62cdb3a26174fc38", "6492f77d1cc9629afd1c7008"];
+  const [confId, setConfId] = useState(confIds[confNo]);
+  const [image, setImage] = useState(9);
+  const changeImage = (num: number) => {
+    setImage(num);
+    if (confNo === 0) {
+      setConfId(confIds[1]);
+      setConfNo(1);
+    }
+    if (confNo === 1) {
+      setConfId(confIds[0]);
+      setConfNo(0);
+    }
+  };
   return (
     <div className="relative bg-black z-10 overflow-x-hidden">
-      <div className="bg-black bg-opacity-60 h-[63rem]">
+      <div className="bg-black bg-opacity-50 h-[63rem]">
+        <NavBar />
         <div className="w-full flex justify-start items-center shadow2 sm:items-end h-[63rem] absolute top-0 overflow-hidden -z-10 ">
-          <img className="mb-[10rem] sm:mb-0" src="images/hero9.jpg" alt="" />
+          <img
+            className="mb-[10rem] sm:mb-0"
+            src={`images/hero${image}.jpg`}
+            alt=""
+          />
           {/* 8 start 9 end,center 13 center,end 16 end 24  26 center */}
         </div>
-        <NavBar />
+        <button
+          onClick={() => {
+            image === 12 ? changeImage(9) : changeImage(12);
+          }}
+          className="border-[3px] border-r-0 text-white hover:bg-white hover:text-black transition-all hover:transition-all p-12 absolute right-0 bottom-64"
+        >
+          <ChevronRight className="scale-150 "/>
+        </button>
         <div className="flex lg:flex-row flex-col justify-center sm:justify-start items-center h-[45rem]">
-          <HeroSection />
-          {/* <ImageSlider01 /> */}
+          <HeroSection confId={confId} />
         </div>
       </div>
-      <Lottie
-      
-        className=" absolute w-1/2 bottom-0 -z-10"
-        animationData={require("../animations/Comp 1(2).json")}
-      />
-      <Lottie
-        className=" absolute w-1/2 bottom-0 left-1/3 -z-10"
-        animationData={require("../animations/Comp 1(2).json")}
-      />
-      <Lottie
-        className=" absolute w-1/2 bottom-0 left-2/3 -z-10"
-        animationData={require("../animations/Comp 1(2).json")}
-      />
-      {/* <dotlottie-player
-        src="https://assets2.lottiefiles.com/dotlotties/dlf10_l12sw9oo.lottie"
-        autoplay
-        loop
-        style={{ height: '100%', width: '100%' }}
-      /> */}
-      <div className="w-full absolute bottom-0 h-[5rem] bg-custom-dark shadow2"></div>
+      <HeroDotsAnimation />
+      <div className="w-full absolute bottom-0 h-[5rem] bg-custom-dark shadow2" />
     </div>
   );
 };
