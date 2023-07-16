@@ -10,9 +10,9 @@ const AnnouncementSection:React.FC = () => {
   if (error) return <></>
   if (isLoading) return <></>
   return (
-    <div className={` relative  flex  bg-[url('/src/assets/images/bgimg1.jpg')] bg-cover flex-col justify-center md:items-start items-cente`}>
-      <div className='bg-black/70 w-full md:pl-32  py-[5rem]'>
-      <h1 className='zona text-ascentColor3 flex text-4xl sm:text-5xl px-[12vw] md:px-0 self-start mb-16 items-center gap-8'>
+    <div className={` relative  flex  flex-col justify-center items-start`}>
+      <div className='bg-black/70 w-full px-[4vw] md:pl-32  py-[5rem] flex flex-col md:items-start items-center'>
+      <h1 className='zona text-ascentColor3 flex text-2xl sm:text-5xl px-[12vw] md:px-0 self-start mb-16 items-center gap-4 sm:gap-8'>
         <div className=' scale-[170%] sm:scale-[200%] flex items-center justify-center'>
         <CampaignIcon/>
         </div>

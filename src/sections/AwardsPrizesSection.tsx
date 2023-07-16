@@ -11,9 +11,9 @@ const AwardsPrizesSection: React.FC = () => {
   if (error) return <></>;
   if (isLoading) return <></>;
   return (
-    <div>
-      <div className="zona px-32 text-5xl">Awards</div>
-      <div className="flex justify-center items-start gap-8 my-[4rem] mx-4 flex-wrap">
+    <div className="bg-white">
+      <div className="zona  px-32 text-5xl">Awards</div>
+      <div className="flex justify-center items-start gap-8 py-[4rem] mx-4 flex-wrap">
         {data.map((award: any, index: number) => (
           <div key={index} className={` w-[23rem] relative overflow-hidden shadow1`}>
             <img className="h-[20rem] object-cover" src={`images/award${index}.jpg`} alt="" />

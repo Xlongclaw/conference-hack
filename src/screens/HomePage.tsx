@@ -3,8 +3,9 @@ import { AnnouncementSection, AwardsPrizesSection, ConferenceSection, DateSectio
 import { Footer } from '../components'
 
 const HomePage:React.FC = () => {
-  return (
-    <div className={`overflow-x-hidden`}>
+  return (<div className='relative'>
+    <div className={`bg-[url('/src/assets/images/bgimg5.jpg')] bg-cover h-full -z-10 w-full fixed`}></div>
+    <div className={`overflow-x-hidden `}>
       <HomeSection/>
       <AnnouncementSection/>
       <ConferenceSection/>
@@ -13,6 +14,7 @@ const HomePage:React.FC = () => {
       <AwardsPrizesSection/>
       <Footer/>
     </div>
+  </div>
   )
 }
 

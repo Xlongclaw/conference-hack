@@ -17,6 +17,7 @@ import SpeakerContainer from "./SpeakerContainer";
 import SpeakersPanel from "./SpeakersPanel";
 import ConferenceWrapper from "./ConferenceWrapper";
 import HeroDotsAnimation from "./HeroDotsAnimation";
+import SocialLinks from "./SocialLinks";
 
 export {
   NavBar,
@@ -37,5 +38,6 @@ export {
   SpeakerContainer,
   SpeakersPanel,
   ConferenceWrapper,
-  HeroDotsAnimation
+  HeroDotsAnimation,
+  SocialLinks
 };

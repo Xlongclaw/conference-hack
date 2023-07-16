@@ -24,30 +24,30 @@ const ConferenceWrapper: React.FC<{
   return (
     <motion.div
       layout
-      animate={showMore ? { width: "70rem" } : { width: "28rem" }}
-      className="flex  justify-center relative items-center w-[28rem] h-[38rem] overflow-hidden rounded-3xl"
+      animate={showMore ? { width: "70rem" } : { width: "30rem" }}
+      className="flex  justify-center relative items-center h-[30rem] sm:h-[38rem] overflow-hidden rounded-3xl"
     >
-      <img className="" src={props.imglink} alt="" />
+      <img className="object-cover w-full sm:w-auto sm:h-auto" src={props.imglink} alt="" />
       <motion.div
         className={`absolute w-full h-full ${
-          showMore ? "bg-black/50" : "bg-black/70 transition-all duration-1000"
-        } bg-black/70`}
+          showMore ? "bg-black/50" : "bg-black/60 transition-all duration-1000"
+        }`}
       ></motion.div>
       <div
-        className={`absolute text-9xl bottom-8 left-8 ${props.color} font-semibold`}
+        className={`absolute text-7xl md:text-9xl bottom-8 left-8 ${props.color} font-semibold`}
       >
         <button
           onClick={() => {
             setShowMore(!showMore);
           }}
-          className="border-[2px] mb-6 top-[-3rem] absolute border-ascentColor3 hover:transition-all hover:duration-300 transition-all 
-          duration-300 hover:bg-ascentColor3 hover:text-ascentColor4 cursor-pointer font-normal custom-font1 px-8 py-2 rounded-2xl
-           text-ascentColor3 mx-4 text-xl"
+          className="border-[2px] mb-6 top-[-5rem] md:top-[-3rem] absolute border-ascentColor3 hover:transition-all hover:duration-300 transition-all 
+          duration-300 hover:bg-ascentColor3 hover:text-ascentColor4 cursor-pointer font-normal custom-font1 px-4 md:px-8 py-2 rounded-2xl
+           text-ascentColor3 md:mx-4 text-xl"
         >
           {showMore ? "Show Less" : "Discover more"}
         </button>
         <h1>{props.heading}</h1>
-        <h3 className="text-6xl font font-medium ml-4 leading-6 tracking-[1.4rem]">
+        <h3 className=" text-3xl md:text-6xl font font-medium ml-4 leading-6 tracking-[10px] md:tracking-[1.4rem]">
           {props.year}
         </h3>
       </div>

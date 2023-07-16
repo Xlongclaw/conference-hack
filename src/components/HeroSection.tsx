@@ -1,9 +1,6 @@
 import React from "react";
-import { Button, DateLocationContainer } from "../components";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import { Button, DateLocationContainer, SocialLinks } from "../components";
+
 import { motion } from "framer-motion";
 import useSWR from "swr";
 
@@ -26,13 +23,11 @@ import useSWR from "swr";
 // };
 
 const HeroSection: React.FC<{confId:string}> = (props) => {
-  const CONF_ID1 = "647f315f62cdb3a26174fc38"
-  const CONF_ID2 = "6492f77d1cc9629afd1c7008"
   const {data,isLoading,error} = useSWR(`https://conference.cyclic.app/home/conf/${props.confId}`)
   console.log(data);
   
   if (error) return <div>ERROR</div>;
-  if (isLoading) return <>.....Loading !</>;
+  if (isLoading) return <div className="">.....Loading !</div>;
   
   const homeData = data;
 
@@ -48,23 +43,8 @@ const HeroSection: React.FC<{confId:string}> = (props) => {
         <DateLocationContainer />
         <div className=" flex gap-4">
           <Button title="Register" />
-
         </div>
-
-        <div className="flex gap-8 mt-16 text-white ">
-          <motion.a href={homeData.facebookLink} target="_blank" whileHover={{scale:1.4,translateY:-10,color:"#5db7de"}}>
-            <FacebookIcon className="scale-150 cursor-pointer" />
-          </motion.a>
-          <motion.a href={homeData.instaLink} target="_blank"  whileHover={{scale:1.4,translateY:-10,color:"#5db7de"}}>
-            <InstagramIcon className="scale-150 cursor-pointer" />
-          </motion.a>
-          <motion.a href={homeData.facebookLink} target="_blank"  whileHover={{scale:1.4,translateY:-10,color:"#5db7de"}}>
-            <LinkedInIcon className="scale-150 cursor-pointer" />
-          </motion.a>
-          <motion.a href={homeData.twitterLink} target="_blank"  whileHover={{scale:1.4,translateY:-10,color:"#5db7de"}}>
-            <TwitterIcon className="scale-150 cursor-pointer" />
-          </motion.a>
-        </div>
+        <SocialLinks instaLink={homeData.instaLink} facebookLink={homeData.facebookLink} twitterLink={homeData.twitterLink} youtubeLink={homeData.youtubeLink}/>
       </div>
     </div>
   );

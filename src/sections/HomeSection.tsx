@@ -34,7 +34,7 @@ const HomeSection: React.FC = () => {
           onClick={() => {
             image === 12 ? changeImage(9) : changeImage(12);
           }}
-          className="border-[3px] border-r-0 text-white hover:bg-white hover:text-black transition-all hover:transition-all p-12 absolute right-0 bottom-64"
+          className="border-[3px] border-r-0 text-white hover:bg-white hover:text-black transition-all hover:transition-all p-4 sm:p-8 md:p-12 absolute right-0 bottom-64"
         >
           <ChevronRight className="scale-150 "/>
         </button>

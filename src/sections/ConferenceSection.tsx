@@ -11,11 +11,11 @@ const ConferenceSection: React.FC = () => {
   if (isLoading) return <></>;
 
   return (
-    <div className="bg-zinc-950 text-ascentColor3 py-32">
-      <div className="zona text-5xl pl-32 pb-32">Conferences</div>
-      <div className="mx-32">
+    <div className=" text-ascentColor3 py-32">
+      <div className="zona text-3xl md:text-5xl md:pl-32 pb-32 flex justify-center md:justify-start">Conferences</div>
+      <div className=" mx-8 md:mx-32">
         {/* <ConferenceLargeContainer /> */}
-        <motion.div layout className="flex gap-24 flex-wrap">
+        <motion.div layout className="flex gap-24 flex-wrap justify-center xl:justify-start">
           <ConferenceWrapper
             instaLink={data[0].instaLink}
             facebookLink={data[0].facebookLink}
