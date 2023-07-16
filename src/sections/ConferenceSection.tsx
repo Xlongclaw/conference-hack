@@ -11,8 +11,13 @@ const ConferenceSection: React.FC = () => {
   if (isLoading) return <></>;
 
   return (
-    <div className=" text-ascentColor3 py-32">
-      <div className="zona text-3xl md:text-5xl md:pl-32 pb-32 flex justify-center md:justify-start">Conferences</div>
+    <div className=" text-ascentColor3 py-32 parallax2 rounded-[3rem]">
+      <div className="zona text-3xl md:text-5xl md:pl-32 mb-16 flex justify-center md:justify-start ">
+        <div className="bg-white  text-black py-2 px-4 shadow2 rounded-2xl">
+
+        Conferences
+        </div>
+        </div>
       <div className=" mx-8 md:mx-32">
         {/* <ConferenceLargeContainer /> */}
         <motion.div layout className="flex gap-24 flex-wrap justify-center xl:justify-start">

@@ -24,13 +24,13 @@ const ConferenceWrapper: React.FC<{
   return (
     <motion.div
       layout
-      animate={showMore ? { width: "70rem" } : { width: "30rem" }}
-      className="flex  justify-center relative items-center h-[30rem] sm:h-[38rem] overflow-hidden rounded-3xl"
+      animate={showMore ? { width: "52rem" } : { width: "30rem" }}
+      className="flex shadow2 justify-center relative items-center h-[30rem] sm:h-[38rem] overflow-hidden rounded-3xl"
     >
       <img className="object-cover w-full sm:w-auto sm:h-auto" src={props.imglink} alt="" />
       <motion.div
         className={`absolute w-full h-full ${
-          showMore ? "bg-black/50" : "bg-black/60 transition-all duration-1000"
+          showMore ? "bg-black/50" : "bg-black/30 transition-all duration-1000"
         }`}
       ></motion.div>
       <div

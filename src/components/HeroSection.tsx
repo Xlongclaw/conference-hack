@@ -24,7 +24,6 @@ import useSWR from "swr";
 
 const HeroSection: React.FC<{confId:string}> = (props) => {
   const {data,isLoading,error} = useSWR(`https://conference.cyclic.app/home/conf/${props.confId}`)
-  console.log(data);
   
   if (error) return <div>ERROR</div>;
   if (isLoading) return <div className="">.....Loading !</div>;

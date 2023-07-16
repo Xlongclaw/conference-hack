@@ -3,6 +3,7 @@ import { HeroDotsAnimation, HeroSection, NavBar } from "../components";
 import {ChevronRight} from "@mui/icons-material"
 
 const HomeSection: React.FC = () => {
+  const [ascentColor,setAscentColor] = useState("")
   const [confNo, setConfNo] = useState(0);
   const confIds = ["647f315f62cdb3a26174fc38", "6492f77d1cc9629afd1c7008"];
   const [confId, setConfId] = useState(confIds[confNo]);

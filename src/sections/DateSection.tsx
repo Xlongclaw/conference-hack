@@ -11,8 +11,8 @@ const DateSection: React.FC = () => {
   if (error) return <></>;
   if (isLoading) return <></>;
   return (
-    <div className="bg-custom-dark text-ascentColor3 flex flex-col py-32 items-center justify-center">
-      <div className="zona text-3xl md:text-5xl pb-32 text-ascentColor3">
+    <div className="parallax bg-custom-dark text-ascentColor3 flex flex-col py-32 items-center justify-center">
+      <div className="zona text-3xl md:text-5xl pb-8 text-ascentColor3">
         Important Dates
       </div>
       {data.map((event: any, index: number) => (
