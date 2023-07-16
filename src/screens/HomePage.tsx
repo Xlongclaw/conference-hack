@@ -1,17 +1,16 @@
 import React from 'react'
-import { AnnouncementSection, CommitteeSection, ConferenceSection, ContactUsSecion, HomeSection, SpeakersSection, SponsorsSection } from '../sections'
+import { AnnouncementSection, AwardsPrizesSection, ConferenceSection, DateSection, HomeSection, SponsorsSection } from '../sections'
 import { Footer } from '../components'
 
 const HomePage:React.FC = () => {
   return (
-    <div className=''>
+    <div className={`overflow-x-hidden`}>
       <HomeSection/>
       <AnnouncementSection/>
       <ConferenceSection/>
-      <CommitteeSection/>
-      <SpeakersSection/>
+      <DateSection/>
       <SponsorsSection/>
-      <ContactUsSecion/>
+      <AwardsPrizesSection/>
       <Footer/>
     </div>
   )

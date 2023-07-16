@@ -27,8 +27,9 @@ import useSWR from "swr";
 
 const HeroSection: React.FC = () => {
   const CONF_ID1 = "647f315f62cdb3a26174fc38"
-  // const CONF_ID2 = "6492f77d1cc9629afd1c7008"
-  const {data,isLoading,error} = useSWR(`https://conference.cyclic.app/home/conf/${CONF_ID1}`)
+  const CONF_ID2 = "6492f77d1cc9629afd1c7008"
+  const {data,isLoading,error} = useSWR(`https://conference.cyclic.app/home/conf/${CONF_ID2}`)
+  console.log(data);
   
   if (error) return <div>ERROR</div>;
   if (isLoading) return <>.....Loading !</>;

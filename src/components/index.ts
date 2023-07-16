@@ -11,5 +11,29 @@ import ImageSlider01 from "./ImageSlider01";
 import ButtonX from "./ButtonX";
 import Button from "./Button";
 import AnnouncementContainer from "./AnnouncementContainer";
+import ConferenceLargeContainer from "./ConferenceLargeContainer";
+import AboutInstituteContainer from "./AboutInstituteContainer";
+import SpeakerContainer from "./SpeakerContainer";
+import SpeakersPanel from "./SpeakersPanel";
+import ConferenceWrapper from "./ConferenceWrapper";
 
-export {NavBar,Logo,NavBarLinks,HamburgerIcon,HamburgerMenu,DropDown,HeroSection,DateLocationContainer,Footer,ImageSlider01,ButtonX,Button,AnnouncementContainer}
+export {
+  NavBar,
+  Logo,
+  NavBarLinks,
+  HamburgerIcon,
+  HamburgerMenu,
+  DropDown,
+  HeroSection,
+  DateLocationContainer,
+  Footer,
+  ImageSlider01,
+  ButtonX,
+  Button,
+  AnnouncementContainer,
+  ConferenceLargeContainer,
+  AboutInstituteContainer,
+  SpeakerContainer,
+  SpeakersPanel,
+  ConferenceWrapper
+};

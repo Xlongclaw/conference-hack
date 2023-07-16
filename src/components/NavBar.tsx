@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ButtonX, HamburgerMenu, Logo, NavBarLinks } from "../components";
-import getDataModule from "../Constants/API";
+
+import useSWR from "swr";
 
 const NavBar: React.FC = () => {
-  const [navBarData, setNavBarData] = useState<any>(null);
+  const { data, isLoading, error } = useSWR(
+    `https://conference.cyclic.app/navbar`
+  );
 
-  useEffect(() => {
-    getDataModule("navbar").then((data) => setNavBarData(data));
-  }, []);
-  if(!navBarData) return <></>
-
+  if (error) return <></>;
+  if (isLoading) return <></>;
   return (
     <div className="flex justify-between items-center md:px-32 sm:px-12 px-8  w-full">
-      <Logo heading={navBarData.heading} subHeading={navBarData.subHeading}/>
+      <Logo heading={data[0].heading} subHeading={data[0].subHeading}/>
       <NavBarLinks />
       <HamburgerMenu />
       {/* <button className="bg-custom-orange py-5 flex-none w-48 text-ascentColor3">
