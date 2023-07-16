@@ -12,16 +12,19 @@ const AwardsPrizesSection: React.FC = () => {
   if (isLoading) return <></>;
   return (
     <div>
-      <div className="custom-font1 text-5xl pb-32">
-        Awards
+      <div className="zona px-32 text-5xl">Awards</div>
+      <div className="flex justify-center items-start gap-8 my-[4rem] mx-4 flex-wrap">
+        {data.map((award: any, index: number) => (
+          <div key={index} className={` w-[23rem] relative overflow-hidden shadow1`}>
+            <img className="h-[20rem] object-cover" src={`images/award${index}.jpg`} alt="" />
+            <div className="p-8">
+              <div className="text-custom-orange text-2xl">{award.title1}</div>
+              <div className="text-sm mb-4 text-red-500">{award.title2}</div>
+              <div>{award.description}</div>
+            </div>
+          </div>
+        ))}
       </div>
-      {data.map((award: any, index: number) => (
-        <div key={index} className="my-[4rem]">
-          <div>{award.title1}</div>
-          <div>{award.title2}</div>
-          <div>{award.description}</div>
-        </div>
-      ))}
     </div>
   );
 };
