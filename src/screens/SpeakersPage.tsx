@@ -1,9 +1,12 @@
 import React from 'react'
+import { Footer, NavBar, SpeakersPanel } from '../components'
 
 const SpeakersPage:React.FC = () => {
   return (
-    <div>
-      
+    <div className=''>
+      <NavBar solid={true}/>
+      <SpeakersPanel/>
+      <Footer/>
     </div>
   )
 }

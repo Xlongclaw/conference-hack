@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {HomePage,SpeakersPage,CommitteesPage,ContactUsPage} from "./screens";
+import {HomePage,SpeakersPage,CommitteesPage,ContactUsPage, SponsorshipPage, AwardsPage} from "./screens";
 import { SWRConfig } from "swr";
 
 
@@ -16,7 +16,10 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage/>} />
           <Route path="/speakers" element={<SpeakersPage/>} />
-          <Route path="/committees" element={<CommitteesPage/>} />
+          <Route path="/committee" element={<CommitteesPage/>} />
+          <Route path="/committee" element={<CommitteesPage/>} />
+          <Route path="/sponsorship" element={<SponsorshipPage/>} />
+          <Route path="/awards" element={<AwardsPage/>} />
           <Route path="/contactus" element={<ContactUsPage/>} />
         </Routes>
       </BrowserRouter>

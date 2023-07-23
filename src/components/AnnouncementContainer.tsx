@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const AnnouncementContainer: React.FC<{key:number;announcement:any}> = (props) => {
   const [expand,setExpand] =useState(false)
   return (
-    <div className=" shadow1 p-6 text-ascentColor4 bg-ascentColor4 border-[3px] rounded-3xl border-ascentColor3 w-[73vw] md:w-[35rem] shadow-2xl shadow-white">
+    <div className=" shadow2 p-6 text-ascentColor4 bg-ascentColor4  rounded-3xl border-ascentColor3 w-[73vw] md:w-[35rem] shadow-2xl shadow-white">
       <h3 className="text-custom-orange mb-2">{props.announcement.createdAt}</h3>
       <h2 className="text-2xl font-semibold text-custom-orange">{props.announcement.title}</h2>
       <h4 className="text-sm mb-2 text-ascentColor3">{props.announcement.metaDescription}</h4>

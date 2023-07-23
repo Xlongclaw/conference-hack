@@ -1,17 +1,17 @@
 import React from "react";
 import useSWR from "swr";
+import { Error, Loading } from "../components";
 
-const AwardsPrizesSection: React.FC = () => {
-  const CONF_ID1 = "647f315f62cdb3a26174fc38";
-  // const CONF_ID2 = "6492f77d1cc9629afd1c7008"
+const AwardsPrizesSection: React.FC<{confId:string}> = (props) => {
   const { data, isLoading, error } = useSWR(
-    `https://conference.cyclic.app/awards/conference/${CONF_ID1}`
+    `https://conference.cyclic.app/awards/conference/${props.confId}`
   );
 
-  if (error) return <></>;
-  if (isLoading) return <></>;
+
+  if (error) return <Error/>;
+  if (isLoading) return <Loading/>;
   return (
-    <div className=" parallax bg-white py-32">
+    <div className="  py-32">
       <div className="zona  mx-32 text-5xl text-custom-lightDark w-[25rem] text-center py-4 shadow2 rounded-3xl bg-ascentColor3">Awards</div>
       <div className="flex justify-center items-start gap-8 py-[4rem] mx-4 flex-wrap">
         {data.map((award: any, index: number) => (

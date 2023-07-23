@@ -4,10 +4,9 @@ import CampaignIcon from "@mui/icons-material/Campaign";
 import useSWR from "swr";
 import Lottie from "lottie-react";
 
-const AnnouncementSection: React.FC = () => {
-  const CONF_ID1 = "647f315f62cdb3a26174fc38";
+const AnnouncementSection: React.FC<{confId:string}> = (props) => {
   const { data, isLoading, error } = useSWR(
-    `https://conference.cyclic.app/announcement/conf/${CONF_ID1}`
+    `https://conference.cyclic.app/announcement/conf/${props.confId}`
   );
 
   if (error) return <></>;

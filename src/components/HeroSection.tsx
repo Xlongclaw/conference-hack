@@ -1,26 +1,6 @@
 import React from "react";
 import { Button, DateLocationContainer, SocialLinks } from "../components";
-
-import { motion } from "framer-motion";
 import useSWR from "swr";
-
-// type homeModel = {
-//   id: string;
-//   confId: string;
-//   confName: string;
-//   confStartDate: string;
-//   confEndDate: string;
-//   logo: string;
-//   shortName: string;
-//   aboutConf: string;
-//   aboutIns: string;
-//   youtubeLink: string;
-//   instaLink: string;
-//   facebookLink: string;
-//   twitterLink: string;
-//   createdAt: string;
-//   updatedAt: string;
-// };
 
 const HeroSection: React.FC<{confId:string}> = (props) => {
   const {data,isLoading,error} = useSWR(`https://conference.cyclic.app/home/conf/${props.confId}`)

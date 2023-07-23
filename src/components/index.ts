@@ -18,6 +18,11 @@ import SpeakersPanel from "./SpeakersPanel";
 import ConferenceWrapper from "./ConferenceWrapper";
 import HeroDotsAnimation from "./HeroDotsAnimation";
 import SocialLinks from "./SocialLinks";
+import SpeakerWrapper from "./SpeakerWrapper";
+import Error from "./Error";
+import Loading from "./Loading";
+import HamBurgerWrapper from "./HamBurgerWrapper";
+import ContactWrapper from "./ContactWrapper";
 
 export {
   NavBar,
@@ -39,5 +44,10 @@ export {
   SpeakersPanel,
   ConferenceWrapper,
   HeroDotsAnimation,
-  SocialLinks
+  SocialLinks,
+  SpeakerWrapper,
+  Error,
+  Loading,
+  HamBurgerWrapper,
+  ContactWrapper
 };

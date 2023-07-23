@@ -1,11 +1,9 @@
 import React from "react";
 import useSWR from "swr";
 
-const SponsorsSection: React.FC = () => {
-  const CONF_ID1 = "647f315f62cdb3a26174fc38";
-  // const CONF_ID2 = "6492f77d1cc9629afd1c7008"
+const SponsorsSection: React.FC<{confId:string}> = (props) => {
   const { data, isLoading, error } = useSWR(
-    `https://conference.cyclic.app/sponsors/conference/${CONF_ID1}`
+    `https://conference.cyclic.app/sponsors/conference/${props.confId}`
   );
 
   if (error) return <></>;
